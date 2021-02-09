@@ -1,5 +1,5 @@
 /*~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
- ~ Copyright 2018 Adobe
+ ~ Copyright 2021 Adobe
  ~
  ~ Licensed under the Apache License, Version 2.0 (the "License");
  ~ you may not use this file except in compliance with the License.
@@ -14,22 +14,26 @@
  ~ limitations under the License.
  ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-"use strict";
+import org.osgi.framework.FrameworkUtil;
 
-const Tools = require("./tools.js");
-const tools = new Tools();
+import com.adobe.cq.sightly.WCMUsePojo;
+import com.adobe.cq.wcm.core.components.models.Page;
 
-let gitTag = process.env.CIRCLE_TAG;
-if (gitTag != "@deploy-snapshot") {
-    throw "Cannot release without a valid git tag";
-}
+/**
+ * Helper Use-Object for displaying the Core Components bundle version
+ *
+ * Usage:
+ *    <sly data-sly-use.bundle="CoreComponentsBundle">${bundle.version}</sly>
+ */
+public class CoreComponentsBundle extends WCMUsePojo {
 
-try {
-    tools.stage("DEPLOY SNAPSHOTS");
-    tools.prepareGPGKey();
-    tools.sh("mvn deploy -B -s ci/settings.xml -Prelease -Padobe-public -Pcloud");
-    tools.stage("DEPLOY SNAPSHOTS DONE");
-} finally {
-    tools.removeGitTag(gitTag);
-    tools.removeGPGKey();
+    @Override
+    public void activate() throws Exception {
+
+    }
+
+    public String getVersion() {
+        return FrameworkUtil.getBundle(Page.class).getVersion().toString();
+    }
+
 }
