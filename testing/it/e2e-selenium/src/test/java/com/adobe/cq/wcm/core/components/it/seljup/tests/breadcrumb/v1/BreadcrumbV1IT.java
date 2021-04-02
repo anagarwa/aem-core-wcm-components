@@ -22,7 +22,7 @@ import com.adobe.cq.wcm.core.components.it.seljup.components.Breadcrumb.Breadcru
 import com.adobe.cq.wcm.core.components.it.seljup.components.Breadcrumb.v1.BreadcrumbItemsV1;
 import com.adobe.cq.wcm.core.components.it.seljup.constant.CoreComponentConstants;
 import com.adobe.cq.wcm.core.components.it.seljup.util.Commons;
-import com.adobe.qe.selenium.pageobject.PageEditorPage;
+import com.adobe.cq.testing.selenium.pageobject.PageEditorPage;
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;

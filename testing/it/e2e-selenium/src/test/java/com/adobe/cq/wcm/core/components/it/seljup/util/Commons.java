@@ -25,7 +25,7 @@ import org.apache.sling.testing.clients.ClientException;
 import org.apache.sling.testing.clients.SlingHttpResponse;
 import org.apache.sling.testing.clients.util.FormEntityBuilder;
 import org.apache.sling.testing.clients.util.HttpUtils;
-import com.adobe.qe.selenium.pagewidgets.Helpers;
+import com.adobe.cq.testing.selenium.pagewidgets.Helpers;
 import org.openqa.selenium.WebDriver;
 
 import java.util.HashMap;

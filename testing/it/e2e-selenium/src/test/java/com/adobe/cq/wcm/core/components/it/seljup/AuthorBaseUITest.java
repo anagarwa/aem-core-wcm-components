@@ -23,7 +23,7 @@ import java.util.Arrays;
 import java.util.Iterator;
 import java.util.List;
 
-import com.adobe.qe.selenium.junit.annotations.Author;
+import com.adobe.cq.testing.selenium.junit.annotations.Author;
 import com.google.gson.JsonArray;
 import com.google.gson.JsonParser;
 import org.apache.commons.lang3.StringUtils;
@@ -41,26 +41,26 @@ import org.junit.jupiter.api.parallel.Execution;
 import org.junit.jupiter.api.parallel.ExecutionMode;
 
 import com.adobe.cq.testing.client.CQClient;
-import com.adobe.qe.selenium.UIAbstractTest;
-import com.adobe.qe.selenium.pageobject.granite.LoginPage;
-import com.adobe.qe.selenium.utils.DisableTour;
-import com.adobe.qe.selenium.junit.extensions.TestContentExtension;
-import com.adobe.qe.selenium.utils.TestContentBuilder;
+import com.adobe.cq.testing.selenium.UIAbstractTest;
+import com.adobe.cq.testing.selenium.pageobject.granite.LoginPage;
+import com.adobe.cq.testing.selenium.utils.DisableTour;
+import com.adobe.cq.testing.selenium.junit.extensions.TestContentExtension;
+import com.adobe.cq.testing.selenium.utils.TestContentBuilder;
 import org.apache.commons.lang3.RandomStringUtils;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 
-import static com.adobe.qe.selenium.Constants.DEFAULT_SMALL_SIZE;
-import static com.adobe.qe.selenium.Constants.GROUPID_CONTENT_AUTHORS;
+import static com.adobe.cq.testing.selenium.Constants.DEFAULT_SMALL_SIZE;
+import static com.adobe.cq.testing.selenium.Constants.GROUPID_CONTENT_AUTHORS;
 
 
-import static com.adobe.qe.selenium.Constants.RUNMODE_AUTHOR;
-import static com.adobe.qe.selenium.pagewidgets.Helpers.setAffinityCookie;
-import static com.adobe.qe.selenium.Constants.GROUPID_CONTENT_AUTHORS;
+import static com.adobe.cq.testing.selenium.Constants.RUNMODE_AUTHOR;
+import static com.adobe.cq.testing.selenium.pagewidgets.Helpers.setAffinityCookie;
+import static com.adobe.cq.testing.selenium.Constants.GROUPID_CONTENT_AUTHORS;
 
 
-import static com.adobe.qe.selenium.Constants.RUNMODE_AUTHOR;
-import static com.adobe.qe.selenium.pagewidgets.Helpers.setAffinityCookie;
+import static com.adobe.cq.testing.selenium.Constants.RUNMODE_AUTHOR;
+import static com.adobe.cq.testing.selenium.pagewidgets.Helpers.setAffinityCookie;
 
 @Execution(ExecutionMode.CONCURRENT)
 public abstract class AuthorBaseUITest extends UIAbstractTest {

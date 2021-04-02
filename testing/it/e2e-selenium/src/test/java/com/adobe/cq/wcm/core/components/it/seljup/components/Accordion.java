@@ -17,16 +17,16 @@
 package com.adobe.cq.wcm.core.components.it.seljup.components;
 
 
-import com.adobe.qe.selenium.pagewidgets.common.BaseComponent;
-import com.adobe.qe.selenium.pagewidgets.coral.CoralPopOver;
-import com.adobe.qe.selenium.pagewidgets.coral.CoralSelectList;
-import com.adobe.qe.selenium.pagewidgets.cq.InsertComponentDialog;
-import com.adobe.qe.selenium.pagewidgets.coral.CoralCheckbox;
+import com.adobe.cq.testing.selenium.pagewidgets.common.BaseComponent;
+import com.adobe.cq.testing.selenium.pagewidgets.coral.CoralPopOver;
+import com.adobe.cq.testing.selenium.pagewidgets.coral.CoralSelectList;
+import com.adobe.cq.testing.selenium.pagewidgets.cq.InsertComponentDialog;
+import com.adobe.cq.testing.selenium.pagewidgets.coral.CoralCheckbox;
 import com.codeborne.selenide.*;
 import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 
-import static com.adobe.qe.selenium.pagewidgets.Helpers.waitForElementAnimationFinished;
+import static com.adobe.cq.testing.selenium.pagewidgets.Helpers.waitForElementAnimationFinished;
 import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 import static com.codeborne.selenide.Selenide.$x;

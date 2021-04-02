@@ -17,8 +17,8 @@
 package com.adobe.cq.wcm.core.components.it.seljup.components;
 
 import com.adobe.cq.wcm.core.components.it.seljup.util.Commons;
-import com.adobe.qe.selenium.pagewidgets.common.BaseComponent;
-import com.adobe.qe.selenium.pagewidgets.coral.CoralMultiField;
+import com.adobe.cq.testing.selenium.pagewidgets.common.BaseComponent;
+import com.adobe.cq.testing.selenium.pagewidgets.coral.CoralMultiField;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.WebDriverRunner;

@@ -21,19 +21,16 @@ import com.adobe.cq.wcm.core.components.it.seljup.AuthorBaseUITest;
 import com.adobe.cq.wcm.core.components.it.seljup.components.button.v1.Button;
 import com.adobe.cq.wcm.core.components.it.seljup.components.button.v1.ButtonConfigureDialog;
 import com.adobe.cq.wcm.core.components.it.seljup.util.Commons;
-import com.adobe.qe.selenium.pageobject.PageEditorPage;
-import com.adobe.qe.selenium.pagewidgets.coral.Dialog;
-import com.adobe.qe.selenium.pagewidgets.cq.EditableToolbar;
-import com.adobe.qe.selenium.pagewidgets.cq.InsertComponentDialog;
+import com.adobe.cq.testing.selenium.pageobject.PageEditorPage;
+import com.adobe.cq.testing.selenium.pagewidgets.coral.Dialog;
+import com.adobe.cq.testing.selenium.pagewidgets.cq.EditableToolbar;
+import com.adobe.cq.testing.selenium.pagewidgets.cq.InsertComponentDialog;
 import com.codeborne.selenide.SelenideElement;
 import com.codeborne.selenide.WebDriverRunner;
 import java.util.concurrent.TimeoutException;
 import org.apache.commons.lang3.StringUtils;
 import org.apache.sling.testing.clients.ClientException;
-import org.junit.jupiter.api.AfterEach;
-import org.junit.jupiter.api.BeforeEach;
-import org.junit.jupiter.api.DisplayName;
-import org.junit.jupiter.api.Test;
+import org.junit.jupiter.api.*;
 import org.openqa.selenium.By;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.openqa.selenium.support.ui.ExpectedConditions;
@@ -43,6 +40,7 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.switchTo;
 import static org.junit.jupiter.api.Assertions.assertTrue;
 
+@Tag("button")
 public class ButtonIT extends AuthorBaseUITest {
 
     final String COMPONENT_RESOURCE_TYPE = "core/wcm/components/button/v1/button";
@@ -121,4 +119,30 @@ public class ButtonIT extends AuthorBaseUITest {
         //buttonConfigureDialog.clickPrimary();
         //Commons.switchContext("ContentFrame");
     }
+
+    // todo discuss with Abhinav why the below is not working, it was working earlier
+//    //@Test
+//    @DisplayName("Add Component Test")
+//    void testAddComponent1() throws Exception {
+//        final String testTitle = "test button";
+//        String testComponentPath = testPage + "/jcr:content/root/responsivegrid/button";
+//        EditableToolbar layoutContainerEditableToolbar = editorPage.openEditableToolbar(testPage + "/jcr:content/root/responsivegrid/*");
+//        InsertComponentDialog insertComponentDialog = layoutContainerEditableToolbar.clickInsertComponent();
+//        insertComponentDialog.selectComponent(proxyCompoenetPath);
+//        assertTrue(editorPage.getComponentOverlay(testComponentPath).exists(), "new inserted text component should exist in UI");
+//        assertResourceExist(authorClient, testComponentPath, "new inserted text component should exist on backend");
+//        ButtonConfigureDialog buttonConfigureDialog = editorPage.openEditableToolbar(testComponentPath).clickConfigure().adaptTo(ButtonConfigureDialog.class);
+//        buttonConfigureDialog.getTitleField().setValue(testTitle);
+//        buttonConfigureDialog.clickPrimary();
+//        switchTo().frame(CONTENT_FRAME);
+//        Button button = new Button();
+//        assertTrue(button.isVisible(), "Button should be visible in content frame");
+//        assertTrue(button.getTitle().trim().equals(testTitle), "Button Text should have been updated");
+//    }
+//
+//    public static void assertResourceExist(CQClient client, String resourcePath, String message) {
+//        await().untilAsserted(() -> {
+//            assertTrue(client.exists(resourcePath), message);
+//        });
+//    }
 }

@@ -16,7 +16,7 @@
 
 package com.adobe.cq.wcm.core.components.it.seljup.components;
 
-import com.adobe.qe.selenium.pagewidgets.common.BaseComponent;
+import com.adobe.cq.testing.selenium.pagewidgets.common.BaseComponent;
 import com.codeborne.selenide.ElementsCollection;
 import com.codeborne.selenide.SelenideElement;
 

@@ -16,8 +16,8 @@
 
 package com.adobe.cq.wcm.core.components.it.seljup.components.button.v1;
 
-import com.adobe.qe.selenium.pagewidgets.common.BaseComponent;
-import com.adobe.qe.selenium.pagewidgets.coral.Dialog;
+import com.adobe.cq.testing.selenium.pagewidgets.common.BaseComponent;
+import com.adobe.cq.testing.selenium.pagewidgets.coral.Dialog;
 import com.codeborne.selenide.Condition;
 import com.codeborne.selenide.SelenideElement;
 

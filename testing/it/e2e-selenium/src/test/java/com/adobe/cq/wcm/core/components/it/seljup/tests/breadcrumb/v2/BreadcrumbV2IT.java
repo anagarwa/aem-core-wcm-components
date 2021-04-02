@@ -23,8 +23,8 @@ import com.adobe.cq.wcm.core.components.it.seljup.components.Breadcrumb.v2.Bread
 import com.adobe.cq.wcm.core.components.it.seljup.components.Breadcrumb.v2.BreadcrumbList;
 import com.adobe.cq.wcm.core.components.it.seljup.constant.CoreComponentConstants;
 import com.adobe.cq.wcm.core.components.it.seljup.util.Commons;
-import com.adobe.qe.selenium.pageobject.PageEditorPage;
-import com.adobe.qe.selenium.pagewidgets.cq.EditableToolbar;
+import com.adobe.cq.testing.selenium.pageobject.PageEditorPage;
+import com.adobe.cq.testing.selenium.pagewidgets.cq.EditableToolbar;
 import com.codeborne.selenide.WebDriverRunner;
 import java.util.ArrayList;
 import java.util.HashMap;
